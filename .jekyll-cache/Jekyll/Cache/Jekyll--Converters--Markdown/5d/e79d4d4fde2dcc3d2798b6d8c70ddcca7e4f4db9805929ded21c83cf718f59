@@ -1,0 +1,276 @@
+I"R0<div class="row">
+<div class="col-lg-9">
+This site's collection comprises a set of lessons, each represented by an image thumbail, metadata, and a link to the associated material. You can search for material using the search box (simply type key words and the most relevant material will become visible). Alternatively, use the _facets_ below to filter by specific subjects, object types, and ACRL frames. The collection items are included with permission from Brock librarians. 
+</div>
+<div class="col-lg-3">
+</div>
+</div>
+
+<h2 id="search">Search</h2>
+
+<div class="search-block">
+  <div class="input-group">
+    <input type="text" class="form-control" id="search" name="x" placeholder="" />
+  </div>
+  <div id="results"></div>
+</div>
+
+<script type="text/javascript" src="/teaching-collection/assets/elasticlunr.min.js"></script>
+
+<script type="text/javascript" src="/teaching-collection/assets/search-ui.js"></script>
+
+<script type="text/javascript">
+  var fields    = ["description","objective","label","discipline","object_type","creator","current_location"];
+  var indexFile = "/teaching-collection/search/index.json";
+  //var url       = "/teaching-collection";
+  var url       = "/teaching-collection/";
+  console.log(url);
+
+  $(document).ready(function() {
+    startSearchUI(fields, indexFile, url);
+  });
+</script>
+
+<hr />
+
+<!--
+  If there are one or more facet_by field names, build a form at the top of the
+  page where each variable gets a set of checkboxes corresponding to
+  all of the possible values of that field.
+-->
+
+<form class="row" id="facets">
+  
+  <fieldset id="object-type-set" class="card m-1 facet-card">
+    <div class="card-header facet-header">
+      <a class="facet-bn" data-toggle="collapse" href="#object-type-collapse" role="button" aria-expanded="false" aria-controls="object-type-collapse">
+        <legend>
+          object type
+          <span class="facets-chevron facets-chevron-bottom float-right ml-2" aria-hidden="true"></span>
+        </legend>
+      </a>
+      
+    </div>
+    <div class="collapse" id="object-type-collapse">
+      <div class="card-body">
+        
+        <div class="facet-item">
+          <input id="presentation" class="object-type" type="checkbox" name="Presentation" value="Presentation" />
+          <label for="Presentation">Presentation</label>
+        </div>
+        
+        <div class="facet-item">
+          <input id="worksheet-activity" class="object-type" type="checkbox" name="Worksheet / Activity" value="Worksheet / Activity" />
+          <label for="Worksheet / Activity">Worksheet / Activity</label>
+        </div>
+        
+      </div>
+    </div>
+  </fieldset>
+  
+  <fieldset id="discipline-set" class="card m-1 facet-card">
+    <div class="card-header facet-header">
+      <a class="facet-bn" data-toggle="collapse" href="#discipline-collapse" role="button" aria-expanded="false" aria-controls="discipline-collapse">
+        <legend>
+          discipline
+          <span class="facets-chevron facets-chevron-bottom float-right ml-2" aria-hidden="true"></span>
+        </legend>
+      </a>
+      
+    </div>
+    <div class="collapse" id="discipline-collapse">
+      <div class="card-body">
+        
+        <div class="facet-item">
+          <input id="any" class="discipline" type="checkbox" name="Any" value="Any" />
+          <label for="Any">Any</label>
+        </div>
+        
+        <div class="facet-item">
+          <input id="history" class="discipline" type="checkbox" name="History" value="History" />
+          <label for="History">History</label>
+        </div>
+        
+        <div class="facet-item">
+          <input id="political-science" class="discipline" type="checkbox" name="Political Science" value="Political Science" />
+          <label for="Political Science">Political Science</label>
+        </div>
+        
+      </div>
+    </div>
+  </fieldset>
+  
+  <fieldset id="creator-set" class="card m-1 facet-card">
+    <div class="card-header facet-header">
+      <a class="facet-bn" data-toggle="collapse" href="#creator-collapse" role="button" aria-expanded="false" aria-controls="creator-collapse">
+        <legend>
+          creator
+          <span class="facets-chevron facets-chevron-bottom float-right ml-2" aria-hidden="true"></span>
+        </legend>
+      </a>
+      
+    </div>
+    <div class="collapse" id="creator-collapse">
+      <div class="card-body">
+        
+        <div class="facet-item">
+          <input id="cal-murgu" class="creator" type="checkbox" name="Cal Murgu" value="Cal Murgu" />
+          <label for="Cal Murgu">Cal Murgu</label>
+        </div>
+        
+        <div class="facet-item">
+          <input id="chelsea-humphries" class="creator" type="checkbox" name="Chelsea Humphries" value="Chelsea Humphries" />
+          <label for="Chelsea Humphries">Chelsea Humphries</label>
+        </div>
+        
+        <div class="facet-item">
+          <input id="john-smith" class="creator" type="checkbox" name="John Smith" value="John Smith" />
+          <label for="John Smith">John Smith</label>
+        </div>
+        
+      </div>
+    </div>
+  </fieldset>
+  
+  <fieldset id="acrl-set" class="card m-1 facet-card">
+    <div class="card-header facet-header">
+      <a class="facet-bn" data-toggle="collapse" href="#acrl-collapse" role="button" aria-expanded="false" aria-controls="acrl-collapse">
+        <legend>
+          acrl
+          <span class="facets-chevron facets-chevron-bottom float-right ml-2" aria-hidden="true"></span>
+        </legend>
+      </a>
+      
+    </div>
+    <div class="collapse" id="acrl-collapse">
+      <div class="card-body">
+        
+        <div class="facet-item">
+          <input id="authority-is-constructed-and-contextual" class="acrl" type="checkbox" name="Authority Is Constructed and Contextual" value="Authority Is Constructed and Contextual" />
+          <label for="Authority Is Constructed and Contextual">Authority Is Constructed and Contextual</label>
+        </div>
+        
+        <div class="facet-item">
+          <input id="information-has-value" class="acrl" type="checkbox" name="Information Has Value" value="Information Has Value" />
+          <label for="Information Has Value">Information Has Value</label>
+        </div>
+        
+        <div class="facet-item">
+          <input id="research-as-inquiry" class="acrl" type="checkbox" name="Research as Inquiry" value="Research as Inquiry" />
+          <label for="Research as Inquiry">Research as Inquiry</label>
+        </div>
+        
+        <div class="facet-item">
+          <input id="searching-as-strategic-exploration" class="acrl" type="checkbox" name="Searching as Strategic Exploration" value="Searching as Strategic Exploration" />
+          <label for="Searching as Strategic Exploration">Searching as Strategic Exploration</label>
+        </div>
+        
+      </div>
+    </div>
+  </fieldset>
+  
+</form>
+
+<!--
+  Build the gallery by iterating through items in the collection. If there are
+  facets specified, fine the items' values for those fields and add them as
+  classes to the gallery-item object. The classes are used by JavaScript
+  that reacts to changes to the checkbox filters.
+-->
+
+<div id="wax-gallery-qatar-container" class="wax-gallery-container full-width">
+  <div class="wax-inline-container">
+    <div id="wax-gallery-qatar" class="wax-gallery">
+      <div class="row">
+         
+        
+
+        <div class="gallery-item-facets worksheet-activity any chelsea-humphries research-as-inquiry col-xl-4 p-1">
+          <div class="card thumbnail-card">
+            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj1/full/250,/0/default.jpg" alt="Starting Your Research Worksheet" />
+            <div class="card-body">
+              <a href="/teaching-collection/qatar/obj1.html"><h3 class="card-title">Starting Your Research Worksheet</h3></a>
+              <!-- remove default text below or replace with a description from
+                the item record (e.g., __This worksheet is used in research consultations and small group teaching sessions. Students are invited to collaborate on the document, and, working with the librarian, fill in the chart to develop search terms and a search string that is then used in Omni for preliminary research.) -->
+              <p class="card-text small">
+                This is a Worksheet / Activity for Any created by
+                Chelsea Humphries.
+              </p>
+            </div>
+          </div>
+        </div>
+         
+        
+
+        <div class="gallery-item-facets presentation history john-smith searching-as-strategic-exploration col-xl-4 p-1">
+          <div class="card thumbnail-card">
+            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj2/full/250,/0/default.jpg" alt="Primary Sources in History" />
+            <div class="card-body">
+              <a href="/teaching-collection/qatar/obj2.html"><h3 class="card-title">Primary Sources in History</h3></a>
+              <!-- remove default text below or replace with a description from
+                the item record (e.g., __This worksheet is used in research consultations and small group teaching sessions. Students are invited to collaborate on the document, and, working with the librarian, fill in the chart to develop search terms and a search string that is then used in Omni for preliminary research.) -->
+              <p class="card-text small">
+                This is a Presentation for History created by
+                John Smith.
+              </p>
+            </div>
+          </div>
+        </div>
+         
+        
+
+        <div class="gallery-item-facets presentation any cal-murgu information-has-value col-xl-4 p-1">
+          <div class="card thumbnail-card">
+            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj3/full/250,/0/default.jpg" alt="Academic Integrity Tutorial" />
+            <div class="card-body">
+              <a href="/teaching-collection/qatar/obj3.html"><h3 class="card-title">Academic Integrity Tutorial</h3></a>
+              <!-- remove default text below or replace with a description from
+                the item record (e.g., This module was created in H5P, and it is a remix of a York University module on academic integrity. It includes knowledge checks throughout. ) -->
+              <p class="card-text small">
+                This is a Presentation for Any created by
+                Cal Murgu.
+              </p>
+            </div>
+          </div>
+        </div>
+         
+        
+
+        <div class="gallery-item-facets presentation political-science cal-murgu authority-is-constructed-and-contextual col-xl-4 p-1">
+          <div class="card thumbnail-card">
+            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj4/full/250,/0/default.jpg" alt="Exploring Hansard" />
+            <div class="card-body">
+              <a href="/teaching-collection/qatar/obj4.html"><h3 class="card-title">Exploring Hansard</h3></a>
+              <!-- remove default text below or replace with a description from
+                the item record (e.g., This video is an introduction to Hansard and Hansard debates. This video complemented an in-person session on the same topic. ) -->
+              <p class="card-text small">
+                This is a Presentation for Political Science created by
+                Cal Murgu.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $( document ).ready(function() {
+
+          console.log(["object_type","discipline","creator","acrl"]) // liquid array of one or more fields for facetting
+
+          // This JavaScript controls the expanding and contracting facet headers.
+          // Additional JS for this page in assets/js/facets.js
+          $('.facet-bn[aria-expanded]').click(function(event){
+            $(this).parent().parent().toggleClass("active");
+            // this selector might return multiple elements
+            $(this).children('legend').children('.facets-chevron').toggleClass("facets-chevron-bottom facets-chevron-top");
+          });
+        
+
+  });
+</script>
+
+:ET

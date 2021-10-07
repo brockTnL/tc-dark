@@ -1,0 +1,61 @@
+---
+layout: none
+---
+[
+  {
+    "pid": "obj1",
+    "description": "__This worksheet is used in research consultations and small group teaching sessions. Students are invited to collaborate on the document, and, working with the librarian, fill in the chart to develop search terms and a search string that is then used in Omni for preliminary research.",
+    "objective": "__Students will learn how to break down their research question into its key concepts, develop a table of search terms, and build a search string.",
+    "label": "Starting Your Research Worksheet",
+    "object_type": "Worksheet / Activity",
+    "discipline": "Any",
+    "creator": "Chelsea Humphries",
+    "collection": "qatar",
+    "thumbnail": "/img/derivatives/iiif/images/obj1/full/250,/0/default.jpg",
+    "content": " ",
+    "permalink": "/qatar/obj1",
+    "lunr_id": 0
+  },
+  {
+    "pid": "obj4",
+    "description": "This video is an introduction to Hansard and Hansard debates. This video complemented an in-person session on the same topic. ",
+    "objective": "By the end of this presentation, students will have: Learned the basics of Hansard (provincial and federal); Explored Hansard Advanced Search",
+    "label": "Exploring Hansard",
+    "object_type": "Presentation",
+    "discipline": "Political Science",
+    "creator": "Cal Murgu",
+    "collection": "qatar",
+    "thumbnail": "/img/derivatives/iiif/images/obj4/full/250,/0/default.jpg",
+    "content": " ",
+    "permalink": "/qatar/obj4",
+    "lunr_id": 1
+  },
+  {
+    "pid": "obj3",
+    "description": "This module was created in H5P, and it is a remix of a York University module on academic integrity. It includes knowledge checks throughout. ",
+    "objective": "Recognize academic integrity as a culturally situated, social practice; Define academic dishonesty and identify different forms of it ;Describe the difference between cheating, non-attribution, and patchwriting",
+    "label": "Academic Integrity Tutorial",
+    "object_type": "Presentation",
+    "discipline": "Any",
+    "creator": "Cal Murgu",
+    "collection": "qatar",
+    "thumbnail": "/img/derivatives/iiif/images/obj3/full/250,/0/default.jpg",
+    "content": " ",
+    "permalink": "/qatar/obj3",
+    "lunr_id": 2
+  },
+  {
+    "pid": "obj2",
+    "description": "__This worksheet is used in research consultations and small group teaching sessions. Students are invited to collaborate on the document, and, working with the librarian, fill in the chart to develop search terms and a search string that is then used in Omni for preliminary research.",
+    "objective": "__Students will learn how to break down their research question into its key concepts, develop a table of search terms, and build a search string.",
+    "label": "Primary Sources in History",
+    "object_type": "Presentation",
+    "discipline": "History",
+    "creator": "John Smith",
+    "collection": "qatar",
+    "thumbnail": "/img/derivatives/iiif/images/obj2/full/250,/0/default.jpg",
+    "content": " ",
+    "permalink": "/qatar/obj2",
+    "lunr_id": 3
+  }
+]
