@@ -27,7 +27,7 @@
   <script type='text/javascript' src='/teaching-collection/assets/js/jquery-3.5.1.min.js'></script>
   
   <script type='text/javascript' defer src='/teaching-collection/assets/bootstrap/bootstrap.min.js'></script>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" integrity="sha512-SJw7jzjMYJhsEnN/BuxTWXkezA2cRanuB8TdCNMXFJjxG9ZGSKOX5P3j03H6kdMxalKHZ7vlBMB4CagFP/de0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <noscript><p>Please enable JavaScript in your browser.</p></noscript></head>
 <body><header class="site-header">
         <nav class="navbar navbar-expand-md banner">
@@ -95,13 +95,20 @@
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
         <div class="home">
- <div class="row">
-    <div class="col-lg-5"><h1>The Library Teaching Collection</h1><h3>Teaching <span style="color:#440027;font-size:small"><em>noun</em></span></h3>
+ <style>
+  .hvr-sweep-to-right:before {
+    background: #440027;
+  }
+  </style>
+
+<div class="row">
+    <div class="col-lg-5"><h1 class="hvr-sweep-to-right">The Library Teaching Collection</h1><h3>Teaching <span style="color:#440027;font-size:small"><em>noun</em></span></h3>
 teach·ing |  /ˈtēCHiNG/
 <br />
 ...the process of attending to people's needs, experiences and feelings, and making specific interventions to help them learn.
 <br />
-<div class="text-center"><a class="action-button btn" href="about" role="button">Learn more</a><a class="action-button btn" href="collection" role="button">Find a lesson</a></div>
+<br />
+<div class="text-center"><a class="action-button btn hvr-grow" href="about" role="button">Learn more</a><a class="action-button btn hvr-grow" href="collection" role="button">Find a lesson</a></div>
 </div>
     <div class="col-lg-7">
     <img style="width: 100%;" src="img/calltoaction.jpg" />
@@ -111,38 +118,17 @@ teach·ing |  /ˈtēCHiNG/
 <p>Welcome to the Brock Library Teaching and Learning Collection. The purpose of this public facing collection is for immediate sharing of teaching content with librarians within and outside of the Brock community.</p>
 
 <hr />
-<h2 id="quick-search">Quick Search</h2>
 
-<div class="search-block">
-  <div class="input-group">
-    <input type="text" class="form-control" id="search" name="x" placeholder="" />
-  </div>
-  <div id="results"></div>
-</div>
-
-<script type="text/javascript" src="/teaching-collection/assets/elasticlunr.min.js"></script>
-
-<script type="text/javascript" src="/teaching-collection/assets/search-ui.js"></script>
-
-<script type="text/javascript">
-  var fields    = ["description","objective","label","discipline","object_type","creator","current_location"];
-  var indexFile = "/teaching-collection/search/index.json";
-  //var url       = "/teaching-collection";
-  var url       = "/teaching-collection/";
-  console.log(url);
-
-  $(document).ready(function() {
-    startSearchUI(fields, indexFile, url);
-  });
-</script>
-
-<p><br /></p>
 <h2 id="recent-updates">Recent Updates</h2>
 <p><br /></p>
 <ul>
   
     <li>
-      <a href="/teaching-collection/2009/04/26/barcamp-boston-4-roundup.html">Lorem ipsum text goes here</a>
+      <a href="/teaching-collection/2021/10/12/New-Business-Lesson-added.html">New business lesson just added.</a>
+    </li>
+  
+    <li>
+      <a href="/teaching-collection/2021/10/10/New-Teaching-and-Learning-Collection-off-the-ground.html">New teaching and learning collection website off the ground</a>
     </li>
   
 </ul>
@@ -160,10 +146,12 @@ teach·ing |  /ˈtēCHiNG/
     <div class="row">
       <div class="col-lg-6">
         <p>CC-BY-SA-NC 4.0 | Made with ❤ by <a href="https://brocku.ca/library/">Brock Library Teaching and Learning</a></p>
-        <img style="width: 50%;" src="/teaching-collection/img/logo.png"></img>
+        <img style="width: 50%;" class="hvr-bob" src="/teaching-collection/img/logo.png"></img>
       </div>
       <div class="col-lg-6">      
-        <span><small>Built with Jekyll and</small> <a href="https://minicomp.github.io/wax/">Wax</a><small></span>
+        <span><small>Built with <a href="https://jekyllrb.com/">Jekyll</a> and</small> <a href="https://minicomp.github.io/wax/">Wax</a><small>. Hosted on <a href="https://github.com">Github.</a></span>
+          <br>
+          <img style="margin-top: 10px; width: 25%;" class="hvr-bob" src="/teaching-collection/img/badger.png"></img>
         
       </div>
     </div>

@@ -27,7 +27,7 @@
   <script type='text/javascript' src='/teaching-collection/assets/js/jquery-3.5.1.min.js'></script>
   <script type='text/javascript' defer src='/teaching-collection/assets/js/facets.js'></script>
   <script type='text/javascript' defer src='/teaching-collection/assets/bootstrap/bootstrap.min.js'></script>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" integrity="sha512-SJw7jzjMYJhsEnN/BuxTWXkezA2cRanuB8TdCNMXFJjxG9ZGSKOX5P3j03H6kdMxalKHZ7vlBMB4CagFP/de0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <noscript><p>Please enable JavaScript in your browser.</p></noscript></head>
 <body><header class="site-header">
         <nav class="navbar navbar-expand-md banner">
@@ -103,7 +103,7 @@
   <div class="post-content">
     <div class="row">
 <div class="col-lg-8">
-This site's collection comprises a set of lessons, each represented by an image thumbail, metadata, and a link to the associated material. You can search for material using the search box (simply type key words and the most relevant material will become visible). Alternatively, use the _facets_ below to filter by specific subjects, object types, and ACRL frames. The collection items are included with permission from Brock librarians. 
+This site's collection comprises a set of lessons, each represented by an image thumbail, metadata, and a link to the associated material. You can search for material using the search box (simply type key words and the most relevant material will become visible). Alternatively, use the facets below to filter by specific subjects, object types, and ACRL frames. The collection items are included with permission from Brock librarians. 
 </div>
 <div class="col-lg-4">
 <img style="width: 125%;" src="../img/collection.jpg" />
@@ -124,7 +124,7 @@ This site's collection comprises a set of lessons, each represented by an image 
 <script type="text/javascript" src="/teaching-collection/assets/search-ui.js"></script>
 
 <script type="text/javascript">
-  var fields    = ["description","objective","label","discipline","object_type","creator","current_location"];
+  var fields    = ["description","objective","label","discipline","object_type","creator","acrl","_date","license"];
   var indexFile = "/teaching-collection/search/index.json";
   //var url       = "/teaching-collection";
   var url       = "/teaching-collection/";
@@ -191,8 +191,8 @@ This site's collection comprises a set of lessons, each represented by an image 
         </div>
         
         <div class="facet-item">
-          <input id="history" class="discipline" type="checkbox" name="History" value="History" />
-          <label for="History">History</label>
+          <input id="business" class="discipline" type="checkbox" name="Business" value="Business" />
+          <label for="Business">Business</label>
         </div>
         
         <div class="facet-item">
@@ -228,45 +228,67 @@ This site's collection comprises a set of lessons, each represented by an image 
         </div>
         
         <div class="facet-item">
-          <input id="john-smith" class="creator" type="checkbox" name="John Smith" value="John Smith" />
-          <label for="John Smith">John Smith</label>
+          <input id="linda-lowry" class="creator" type="checkbox" name="Linda Lowry" value="Linda Lowry" />
+          <label for="Linda Lowry">Linda Lowry</label>
         </div>
         
       </div>
     </div>
   </fieldset>
   
-  <fieldset id="acrl-set" class="card m-1 facet-card">
+  <fieldset id="frame-set" class="card m-1 facet-card">
     <div class="card-header facet-header">
-      <a class="facet-bn" data-toggle="collapse" href="#acrl-collapse" role="button" aria-expanded="false" aria-controls="acrl-collapse">
+      <a class="facet-bn" data-toggle="collapse" href="#frame-collapse" role="button" aria-expanded="false" aria-controls="frame-collapse">
         <legend>
-          acrl
+          frame
           <span class="facets-chevron facets-chevron-bottom float-right ml-2" aria-hidden="true"></span>
         </legend>
       </a>
       
     </div>
-    <div class="collapse" id="acrl-collapse">
+    <div class="collapse" id="frame-collapse">
       <div class="card-body">
         
         <div class="facet-item">
-          <input id="authority-is-constructed-and-contextual" class="acrl" type="checkbox" name="Authority Is Constructed and Contextual" value="Authority Is Constructed and Contextual" />
+          <input id="authority-is-constructed-and-contextual" class="frame" type="checkbox" name="Authority Is Constructed and Contextual" value="Authority Is Constructed and Contextual" />
           <label for="Authority Is Constructed and Contextual">Authority Is Constructed and Contextual</label>
         </div>
         
         <div class="facet-item">
-          <input id="information-has-value" class="acrl" type="checkbox" name="Information Has Value" value="Information Has Value" />
+          <input id="information-has-value" class="frame" type="checkbox" name="Information Has Value" value="Information Has Value" />
           <label for="Information Has Value">Information Has Value</label>
         </div>
         
         <div class="facet-item">
-          <input id="research-as-inquiry" class="acrl" type="checkbox" name="Research as Inquiry" value="Research as Inquiry" />
+          <input id="research-as-inquiry" class="frame" type="checkbox" name="Research as Inquiry" value="Research as Inquiry" />
           <label for="Research as Inquiry">Research as Inquiry</label>
         </div>
         
         <div class="facet-item">
-          <input id="searching-as-strategic-exploration" class="acrl" type="checkbox" name="Searching as Strategic Exploration" value="Searching as Strategic Exploration" />
+          <input id="searching-as-strategic-exploration" class="frame" type="checkbox" name="Searching as Strategic Exploration" value="Searching as Strategic Exploration" />
           <label for="Searching as Strategic Exploration">Searching as Strategic Exploration</label>
+        </div>
+        
+      </div>
+    </div>
+  </fieldset>
+  
+  <fieldset id="license-set" class="card m-1 facet-card">
+    <div class="card-header facet-header">
+      <a class="facet-bn" data-toggle="collapse" href="#license-collapse" role="button" aria-expanded="false" aria-controls="license-collapse">
+        <legend>
+          license
+          <span class="facets-chevron facets-chevron-bottom float-right ml-2" aria-hidden="true"></span>
+        </legend>
+      </a>
+      
+    </div>
+    <div class="collapse" id="license-collapse">
+      <div class="card-body">
+        
+        <div class="facet-item">
+          <input id="cc-nc-sa" class="license" type="checkbox" name="CC-NC-SA" value="CC-NC-SA" />
+          <label for="CC-NC-SA">CC-NC-SA</label>
         </div>
         
       </div>
@@ -289,13 +311,13 @@ This site's collection comprises a set of lessons, each represented by an image 
          
         
 
-        <div class="gallery-item-facets worksheet-activity any chelsea-humphries research-as-inquiry col-xl-4 p-1">
+        <div class="gallery-item-facets worksheet-activity any chelsea-humphries research-as-inquiry cc-nc-sa col-xl-3 p-1">
           <div class="card thumbnail-card">
             <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj1/full/250,/0/default.jpg" alt="Starting Your Research Worksheet" />
             <div class="card-body">
               <a href="/teaching-collection/qatar/obj1.html"><h3 class="card-title">Starting Your Research Worksheet</h3></a>
               <!-- remove default text below or replace with a description from
-                the item record (e.g., __This worksheet is used in research consultations and small group teaching sessions. Students are invited to collaborate on the document, and, working with the librarian, fill in the chart to develop search terms and a search string that is then used in Omni for preliminary research.) -->
+                the item record (e.g., This worksheet is used in research consultations and small group teaching sessions. Students are invited to collaborate on the document, and, working with the librarian, fill in the chart to develop search terms and a search string that is then used in Omni for preliminary research.) -->
               <p class="card-text small">
                 This is a Worksheet / Activity for Any created by
                 Chelsea Humphries.
@@ -306,28 +328,11 @@ This site's collection comprises a set of lessons, each represented by an image 
          
         
 
-        <div class="gallery-item-facets presentation history john-smith searching-as-strategic-exploration col-xl-4 p-1">
+        <div class="gallery-item-facets presentation any cal-murgu information-has-value cc-nc-sa col-xl-3 p-1">
           <div class="card thumbnail-card">
-            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj2/full/250,/0/default.jpg" alt="Primary Sources in History" />
+            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj2/full/250,/0/default.jpg" alt="Academic Integrity Tutorial" />
             <div class="card-body">
-              <a href="/teaching-collection/qatar/obj2.html"><h3 class="card-title">Primary Sources in History</h3></a>
-              <!-- remove default text below or replace with a description from
-                the item record (e.g., __This worksheet is used in research consultations and small group teaching sessions. Students are invited to collaborate on the document, and, working with the librarian, fill in the chart to develop search terms and a search string that is then used in Omni for preliminary research.) -->
-              <p class="card-text small">
-                This is a Presentation for History created by
-                John Smith.
-              </p>
-            </div>
-          </div>
-        </div>
-         
-        
-
-        <div class="gallery-item-facets presentation any cal-murgu information-has-value col-xl-4 p-1">
-          <div class="card thumbnail-card">
-            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj3/full/250,/0/default.jpg" alt="Academic Integrity Tutorial" />
-            <div class="card-body">
-              <a href="/teaching-collection/qatar/obj3.html"><h3 class="card-title">Academic Integrity Tutorial</h3></a>
+              <a href="/teaching-collection/qatar/obj2.html"><h3 class="card-title">Academic Integrity Tutorial</h3></a>
               <!-- remove default text below or replace with a description from
                 the item record (e.g., This module was created in H5P, and it is a remix of a York University module on academic integrity. It includes knowledge checks throughout. ) -->
               <p class="card-text small">
@@ -340,16 +345,67 @@ This site's collection comprises a set of lessons, each represented by an image 
          
         
 
-        <div class="gallery-item-facets presentation political-science cal-murgu authority-is-constructed-and-contextual col-xl-4 p-1">
+        <div class="gallery-item-facets presentation political-science cal-murgu authority-is-constructed-and-contextual cc-nc-sa col-xl-3 p-1">
           <div class="card thumbnail-card">
-            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj4/full/250,/0/default.jpg" alt="Exploring Hansard" />
+            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj3/full/250,/0/default.jpg" alt="Exploring Hansard" />
             <div class="card-body">
-              <a href="/teaching-collection/qatar/obj4.html"><h3 class="card-title">Exploring Hansard</h3></a>
+              <a href="/teaching-collection/qatar/obj3.html"><h3 class="card-title">Exploring Hansard</h3></a>
               <!-- remove default text below or replace with a description from
                 the item record (e.g., This video is an introduction to Hansard and Hansard debates. This video complemented an in-person session on the same topic. ) -->
               <p class="card-text small">
                 This is a Presentation for Political Science created by
                 Cal Murgu.
+              </p>
+            </div>
+          </div>
+        </div>
+         
+        
+
+        <div class="gallery-item-facets presentation any chelsea-humphries searching-as-strategic-exploration cc-nc-sa col-xl-3 p-1">
+          <div class="card thumbnail-card">
+            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj4/full/250,/0/default.jpg" alt="Library Research 101" />
+            <div class="card-body">
+              <a href="/teaching-collection/qatar/obj4.html"><h3 class="card-title">Library Research 101</h3></a>
+              <!-- remove default text below or replace with a description from
+                the item record (e.g., This is a synchronous, online presentation for undergraduate students, introducing them to the basics of library research. It is intended for all disciplines, and benefits from being run by at least two librarians with diverse research experience. Low-stakes participation/interaction is facilitated by Mentimeter.) -->
+              <p class="card-text small">
+                This is a Presentation for Any created by
+                Chelsea Humphries.
+              </p>
+            </div>
+          </div>
+        </div>
+         
+        
+
+        <div class="gallery-item-facets presentation any cal-murgu research-as-inquiry cc-nc-sa col-xl-3 p-1">
+          <div class="card thumbnail-card">
+            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj5/full/250,/0/default.jpg" alt="Scoping Reviews Review" />
+            <div class="card-body">
+              <a href="/teaching-collection/qatar/obj5.html"><h3 class="card-title">Scoping Reviews Review</h3></a>
+              <!-- remove default text below or replace with a description from
+                the item record (e.g., This two-part presentation was used for Pascal Lupien and his research assistants in the summer of 2021. The first session focused on the specific elements of a scoping review. The second session focused on how to manage references. ) -->
+              <p class="card-text small">
+                This is a Presentation for Any created by
+                Cal Murgu.
+              </p>
+            </div>
+          </div>
+        </div>
+         
+        
+
+        <div class="gallery-item-facets presentation business linda-lowry authority-is-constructed-and-contextual cc-nc-sa col-xl-3 p-1">
+          <div class="card thumbnail-card">
+            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj6_00/full/250,/0/default.jpg" alt="Sources and strategies for feasibility analysis research" />
+            <div class="card-body">
+              <a href="/teaching-collection/qatar/obj6.html"><h3 class="card-title">Sources and strategies for feasibility analysis research</h3></a>
+              <!-- remove default text below or replace with a description from
+                the item record (e.g., A required course for the BBA. Feasibility analysis is a common assignment so this presentation addresses the requirement of the assignment.) -->
+              <p class="card-text small">
+                This is a Presentation for Business created by
+                Linda Lowry.
               </p>
             </div>
           </div>
@@ -363,7 +419,7 @@ This site's collection comprises a set of lessons, each represented by an image 
 <script type="text/javascript">
   $( document ).ready(function() {
 
-          console.log(["object_type","discipline","creator","acrl"]) // liquid array of one or more fields for facetting
+          console.log(["object_type","discipline","creator","frame","license"]) // liquid array of one or more fields for facetting
 
           // This JavaScript controls the expanding and contracting facet headers.
           // Additional JS for this page in assets/js/facets.js
@@ -393,10 +449,12 @@ This site's collection comprises a set of lessons, each represented by an image 
     <div class="row">
       <div class="col-lg-6">
         <p>CC-BY-SA-NC 4.0 | Made with ❤ by <a href="https://brocku.ca/library/">Brock Library Teaching and Learning</a></p>
-        <img style="width: 50%;" src="/teaching-collection/img/logo.png"></img>
+        <img style="width: 50%;" class="hvr-bob" src="/teaching-collection/img/logo.png"></img>
       </div>
       <div class="col-lg-6">      
-        <span><small>Built with Jekyll and</small> <a href="https://minicomp.github.io/wax/">Wax</a><small></span>
+        <span><small>Built with <a href="https://jekyllrb.com/">Jekyll</a> and</small> <a href="https://minicomp.github.io/wax/">Wax</a><small>. Hosted on <a href="https://github.com">Github.</a></span>
+          <br>
+          <img style="margin-top: 10px; width: 25%;" class="hvr-bob" src="/teaching-collection/img/badger.png"></img>
         
       </div>
     </div>

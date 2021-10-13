@@ -6,8 +6,8 @@
       "@type": "sc:Canvas",
       "@id": "/teaching-collection/img/derivatives/iiif/canvas/obj2.json",
       "label": "front",
-      "width": 5080,
-      "height": 3532,
+      "width": 4004,
+      "height": 2060,
       "thumbnail": "/teaching-collection/img/derivatives/iiif/images/obj2/full/250,/0/default.jpg",
       "images": [
         {
@@ -23,8 +23,8 @@
               "@id": "/teaching-collection/img/derivatives/iiif/images/obj2",
               "profile": "http://iiif.io/api/image/2/level0.json"
             },
-            "width": 5080,
-            "height": 3532
+            "width": 2002,
+            "height": 1030
           },
           "on": "/teaching-collection/img/derivatives/iiif/canvas/obj2.json"
         }

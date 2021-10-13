@@ -1,0 +1,19 @@
+{
+  "@type": "oa:Annotation",
+  "@id": "/teaching-collection/img/derivatives/iiif/annotation/obj6_47.json",
+  "motivation": "sc:painting",
+  "resource": {
+    "@id": "/teaching-collection/img/derivatives/iiif/images/obj6_47/full/full/0/default.jpg",
+    "@type": "dcterms:Image",
+    "format": "image/jpeg",
+    "service": {
+      "@context": "http://iiif.io/api/image/2/context.json",
+      "@id": "/teaching-collection/img/derivatives/iiif/images/obj6_47",
+      "profile": "http://iiif.io/api/image/2/level0.json"
+    },
+    "width": 3000,
+    "height": 2250
+  },
+  "on": "/teaching-collection/img/derivatives/iiif/canvas/obj6_47.json",
+  "@context": "http://iiif.io/api/presentation/2/context.json"
+}

@@ -8,6 +8,16 @@ layout: none
   "label": "qatar",
   "manifests": [
     {
+      "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/obj5/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "obj5"
+    },
+    {
+      "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/obj6/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "obj6"
+    },
+    {
       "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/obj4/manifest.json",
       "@type": "sc:Manifest",
       "label": "obj4"

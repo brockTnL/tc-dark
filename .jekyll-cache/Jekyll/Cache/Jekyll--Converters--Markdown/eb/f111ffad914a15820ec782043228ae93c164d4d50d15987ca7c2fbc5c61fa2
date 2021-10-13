@@ -1,0 +1,25 @@
+I"	
+<div class="search-block">
+  <div class="input-group">
+    <input type="text" class="form-control" id="search" name="x" placeholder="" />
+  </div>
+  <div id="results"></div>
+</div>
+
+<script type="text/javascript" src="/teaching-collection/assets/elasticlunr.min.js"></script>
+
+<script type="text/javascript" src="/teaching-collection/assets/search-ui.js"></script>
+
+<script type="text/javascript">
+  var fields    = ["description","objective","label","discipline","object_type","creator","acrl","_date","license"];
+  var indexFile = "/teaching-collection/search/index.json";
+  //var url       = "/teaching-collection";
+  var url       = "/teaching-collection/";
+  console.log(url);
+
+  $(document).ready(function() {
+    startSearchUI(fields, indexFile, url);
+  });
+</script>
+
+:ET

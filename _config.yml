@@ -95,7 +95,10 @@ search:
           - discipline
           - object_type
           - creator
-          - current_location
+          - acrl
+          - _date
+          - license
+
 
 # --------------------------------------------------------------
 # SITE MENU SETTINGS
