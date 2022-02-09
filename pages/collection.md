@@ -9,7 +9,7 @@ permalink: /collection/
 This site's collection comprises a set of lessons, each represented by an image thumbail, metadata, and a link to the associated material. You can search for material using the search box (simply type key words and the most relevant material will become visible). Alternatively, use the facets below to filter by specific subjects, object types, and ACRL frames. The collection items are included with permission from Brock librarians. 
 </div>
 <div class="col-lg-4">
-<img style="width: 125%;" src="../img/collection.jpg">
+<img style="width: 75%;" src="../img/teachers.svg">
 </div>
 </div>
 
@@ -19,4 +19,4 @@ This site's collection comprises a set of lessons, each represented by an image 
 
 <hr> 
 
-{% include facet_gallery.html facet_by='object_type|discipline|creator|frame|license' collection='qatar' num_column=4 %}
+{% include facet_gallery.html facet_by='object_type|discipline|creator|frame|study_status|license' collection='qatar' num_column=4 %}

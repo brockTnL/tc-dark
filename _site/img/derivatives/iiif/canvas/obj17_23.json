@@ -1,0 +1,29 @@
+{
+  "@type": "sc:Canvas",
+  "@id": "/teaching-collection/img/derivatives/iiif/canvas/obj17_23.json",
+  "label": "Page 24",
+  "width": 3000,
+  "height": 2250,
+  "thumbnail": "/teaching-collection/img/derivatives/iiif/images/obj17_23/full/250,/0/default.jpg",
+  "images": [
+    {
+      "@type": "oa:Annotation",
+      "@id": "/teaching-collection/img/derivatives/iiif/annotation/obj17_23.json",
+      "motivation": "sc:painting",
+      "resource": {
+        "@id": "/teaching-collection/img/derivatives/iiif/images/obj17_23/full/full/0/default.jpg",
+        "@type": "dcterms:Image",
+        "format": "image/jpeg",
+        "service": {
+          "@context": "http://iiif.io/api/image/2/context.json",
+          "@id": "/teaching-collection/img/derivatives/iiif/images/obj17_23",
+          "profile": "http://iiif.io/api/image/2/level0.json"
+        },
+        "width": 3000,
+        "height": 2250
+      },
+      "on": "/teaching-collection/img/derivatives/iiif/canvas/obj17_23.json"
+    }
+  ],
+  "@context": "http://iiif.io/api/presentation/2/context.json"
+}

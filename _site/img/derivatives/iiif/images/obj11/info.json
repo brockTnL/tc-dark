@@ -1,0 +1,42 @@
+{
+  "@context": "http://iiif.io/api/image/2/context.json",
+  "@id": "/teaching-collection/img/derivatives/iiif/images/obj11",
+  "protocol": "http://iiif.io/api/image",
+  "width": 1814,
+  "height": 1050,
+  "sizes": [
+    {
+      "width": 1814,
+      "height": 1050
+    },
+    {
+      "width": 250,
+      "height": 145
+    },
+    {
+      "width": 1140,
+      "height": 660
+    }
+  ],
+  "profile": [
+    "http://iiif.io/api/image/2/level0.json",
+    {
+      "supports": [
+        "cors",
+        "sizeByWhListed",
+        "baseUriRedirect"
+      ]
+    }
+  ],
+  "tiles": [
+    {
+      "width": 512,
+      "scaleFactors": [
+        1,
+        2,
+        4,
+        8
+      ]
+    }
+  ]
+}

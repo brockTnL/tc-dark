@@ -9,7 +9,7 @@ layout: home
 ---
 <style>
   .hvr-sweep-to-right:before {
-    background: #440027;
+    background: #CC0000;
   }
   </style>
 <div class="row">

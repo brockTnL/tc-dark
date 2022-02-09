@@ -26,12 +26,12 @@ main {
 }
 
 .banner {
-  background-color: $dark-background;
-  color: $light-text;
+  background-color: #CC0000;
+  color: white;
 }
 
 .banner a {
-  color: $light-link;
+  color: white;
 }
 
 .banner a:hover {
@@ -39,13 +39,13 @@ main {
 }
 
 a.action-button {
-  background-color: $medium-background;
-  color: $light-text;
+  background-color: #CC0000;
+  color: white;
   margin: 1rem;
 }
 
 a.action-button:hover {
-  background-color: $dark-background;
+  background-color: #CC0000;
   color: $light-link-hover;
 }
 

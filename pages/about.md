@@ -8,4 +8,4 @@ This collection is maintained by the Teaching and Learning department at the Bro
 
 ## Special thanks
 
-Facets is the result of the hard work of Angela Zoss and Alex Gil. I simply copy and paste their code again and again, 'making it work' somehow. Facets builds on the work of Marii Nyröp. The content displayed here is the hard work of Librarians at Brock University, in St. Catharines, Canada. 
+Facets is the result of the hard work of Angela Zoss and Alex Gil. I simply copy and paste their code again and again, 'making it work' somehow. Facets builds on the work of Marii Nyröp. The content displayed here is the hard work of Librarians at Brock University, in St. Catharines, Canada. The website is managed by Cal Murgu, Instructional Design Librarian at Brock. 

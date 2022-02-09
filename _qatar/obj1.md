@@ -7,13 +7,14 @@ description: This worksheet is used in research consultations and small group te
 objective: Students will learn how to break down their research question into its
   key concepts, develop a table of search terms, and build a search string.
 label: Starting Your Research Worksheet
-object_type: Worksheet / Activity
+object_type: Activity
 discipline: Any
 creator: Chelsea Humphries
 frame: Research as Inquiry
-source: https://www.ontario.ca/page/list-ontario-municipalities
+source:
 _date: '2021'
 license: CC-NC-SA
+study_status: Undergraduate
 order: '0'
 layout: qatar_item
 collection: qatar

@@ -2202,15 +2202,15 @@ main { padding: 2rem; }
 
 .subtitle { padding-bottom: 0.3125rem; }
 
-.banner { background-color: #440027; color: #D49A6A; }
+.banner { background-color: #CC0000; color: white; }
 
-.banner a { color: #FFD1AA; }
+.banner a { color: white; }
 
 .banner a:hover { color: #CD88AF; }
 
-a.action-button { background-color: #801515; color: #D49A6A; margin: 1rem; }
+a.action-button { background-color: #CC0000; color: white; margin: 1rem; }
 
-a.action-button:hover { background-color: #440027; color: #CD88AF; }
+a.action-button:hover { background-color: #CC0000; color: #CD88AF; }
 
 a, a.dropdown-item { color: #801515; }
 

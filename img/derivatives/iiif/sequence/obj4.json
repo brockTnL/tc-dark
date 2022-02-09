@@ -9,8 +9,8 @@ layout: none
       "@type": "sc:Canvas",
       "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/canvas/obj4.json",
       "label": "front",
-      "width": 4216,
-      "height": 2356,
+      "width": 3532,
+      "height": 2200,
       "thumbnail": "{{ '/' | absolute_url }}img/derivatives/iiif/images/obj4/full/250,/0/default.jpg",
       "images": [
         {
@@ -26,8 +26,8 @@ layout: none
               "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/images/obj4",
               "profile": "http://iiif.io/api/image/2/level0.json"
             },
-            "width": 2108,
-            "height": 1178
+            "width": 1766,
+            "height": 1100
           },
           "on": "{{ '/' | absolute_url }}img/derivatives/iiif/canvas/obj4.json"
         }

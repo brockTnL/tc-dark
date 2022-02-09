@@ -1,18 +1,20 @@
 ---
 pid: obj2
-description: 'This module was created in H5P, and it is a remix of a York University
-  module on academic integrity. It includes knowledge checks throughout. '
-objective: Recognize academic integrity as a culturally situated, social practice;
-  Define academic dishonesty and identify different forms of it ;Describe the difference
-  between cheating, non-attribution, and patchwriting
-label: Academic Integrity Tutorial
-object_type: Presentation
+description: Each question in this activity is associated with one of the featured
+  resources in the associated presentation. Students have an opportunity to test out
+  resources, in a structured manner, while the librarian and prof is in the classroom. 20
+  minutes. 
+objective: Through this activity, students willpractice finding grey literature using
+  library and open access databasespractice advanced search operators in Google
+label: Wrangling Grey Literature Worksheets
+object_type: Activity
 discipline: Any
 creator: Cal Murgu
 frame: Information Has Value
-source: https://h5pstudio.ecampusontario.ca/content/18095
+source:
 _date: '2021'
 license: CC-NC-SA
+study_status: Undergraduate
 order: '1'
 layout: qatar_item
 collection: qatar

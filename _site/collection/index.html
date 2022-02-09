@@ -106,7 +106,7 @@
 This site's collection comprises a set of lessons, each represented by an image thumbail, metadata, and a link to the associated material. You can search for material using the search box (simply type key words and the most relevant material will become visible). Alternatively, use the facets below to filter by specific subjects, object types, and ACRL frames. The collection items are included with permission from Brock librarians. 
 </div>
 <div class="col-lg-4">
-<img style="width: 125%;" src="../img/collection.jpg" />
+<img style="width: 75%;" src="../img/teachers.svg" />
 </div>
 </div>
 
@@ -124,7 +124,7 @@ This site's collection comprises a set of lessons, each represented by an image 
 <script type="text/javascript" src="/teaching-collection/assets/search-ui.js"></script>
 
 <script type="text/javascript">
-  var fields    = ["description","objective","label","discipline","object_type","creator","acrl","_date","license"];
+  var fields    = ["description","objective","label","discipline","object_type","creator","acrl","_date","license","study_status"];
   var indexFile = "/teaching-collection/search/index.json";
   //var url       = "/teaching-collection";
   var url       = "/teaching-collection/";
@@ -159,13 +159,23 @@ This site's collection comprises a set of lessons, each represented by an image 
       <div class="card-body">
         
         <div class="facet-item">
-          <input id="presentation" class="object-type" type="checkbox" name="Presentation" value="Presentation" />
-          <label for="Presentation">Presentation</label>
+          <input id="activity" class="object-type" type="checkbox" name="Activity" value="Activity" />
+          <label for="Activity">Activity</label>
         </div>
         
         <div class="facet-item">
-          <input id="worksheet-activity" class="object-type" type="checkbox" name="Worksheet / Activity" value="Worksheet / Activity" />
-          <label for="Worksheet / Activity">Worksheet / Activity</label>
+          <input id="assignment" class="object-type" type="checkbox" name="Assignment" value="Assignment" />
+          <label for="Assignment">Assignment</label>
+        </div>
+        
+        <div class="facet-item">
+          <input id="other" class="object-type" type="checkbox" name="Other" value="Other" />
+          <label for="Other">Other</label>
+        </div>
+        
+        <div class="facet-item">
+          <input id="presentation" class="object-type" type="checkbox" name="Presentation" value="Presentation" />
+          <label for="Presentation">Presentation</label>
         </div>
         
       </div>
@@ -193,6 +203,21 @@ This site's collection comprises a set of lessons, each represented by an image 
         <div class="facet-item">
           <input id="business" class="discipline" type="checkbox" name="Business" value="Business" />
           <label for="Business">Business</label>
+        </div>
+        
+        <div class="facet-item">
+          <input id="business" class="discipline" type="checkbox" name="business" value="business" />
+          <label for="business">business</label>
+        </div>
+        
+        <div class="facet-item">
+          <input id="classics" class="discipline" type="checkbox" name="Classics" value="Classics" />
+          <label for="Classics">Classics</label>
+        </div>
+        
+        <div class="facet-item">
+          <input id="languages" class="discipline" type="checkbox" name="Languages" value="Languages" />
+          <label for="Languages">Languages</label>
         </div>
         
         <div class="facet-item">
@@ -225,6 +250,26 @@ This site's collection comprises a set of lessons, each represented by an image 
         <div class="facet-item">
           <input id="chelsea-humphries" class="creator" type="checkbox" name="Chelsea Humphries" value="Chelsea Humphries" />
           <label for="Chelsea Humphries">Chelsea Humphries</label>
+        </div>
+        
+        <div class="facet-item">
+          <input id="colleen-mackinnon" class="creator" type="checkbox" name="Colleen MacKinnon" value="Colleen MacKinnon" />
+          <label for="Colleen MacKinnon">Colleen MacKinnon</label>
+        </div>
+        
+        <div class="facet-item">
+          <input id="evelyn-feldman" class="creator" type="checkbox" name="Evelyn Feldman" value="Evelyn Feldman" />
+          <label for="Evelyn Feldman">Evelyn Feldman</label>
+        </div>
+        
+        <div class="facet-item">
+          <input id="ian-gordon" class="creator" type="checkbox" name="Ian Gordon" value="Ian Gordon" />
+          <label for="Ian Gordon">Ian Gordon</label>
+        </div>
+        
+        <div class="facet-item">
+          <input id="jennifer-thiessen" class="creator" type="checkbox" name="Jennifer Thiessen" value="Jennifer Thiessen" />
+          <label for="Jennifer Thiessen">Jennifer Thiessen</label>
         </div>
         
         <div class="facet-item">
@@ -273,6 +318,33 @@ This site's collection comprises a set of lessons, each represented by an image 
     </div>
   </fieldset>
   
+  <fieldset id="study-status-set" class="card m-1 facet-card">
+    <div class="card-header facet-header">
+      <a class="facet-bn" data-toggle="collapse" href="#study-status-collapse" role="button" aria-expanded="false" aria-controls="study-status-collapse">
+        <legend>
+          study status
+          <span class="facets-chevron facets-chevron-bottom float-right ml-2" aria-hidden="true"></span>
+        </legend>
+      </a>
+      
+    </div>
+    <div class="collapse" id="study-status-collapse">
+      <div class="card-body">
+        
+        <div class="facet-item">
+          <input id="graduate" class="study-status" type="checkbox" name="Graduate" value="Graduate" />
+          <label for="Graduate">Graduate</label>
+        </div>
+        
+        <div class="facet-item">
+          <input id="undergraduate" class="study-status" type="checkbox" name="Undergraduate" value="Undergraduate" />
+          <label for="Undergraduate">Undergraduate</label>
+        </div>
+        
+      </div>
+    </div>
+  </fieldset>
+  
   <fieldset id="license-set" class="card m-1 facet-card">
     <div class="card-header facet-header">
       <a class="facet-bn" data-toggle="collapse" href="#license-collapse" role="button" aria-expanded="false" aria-controls="license-collapse">
@@ -311,7 +383,7 @@ This site's collection comprises a set of lessons, each represented by an image 
          
         
 
-        <div class="gallery-item-facets worksheet-activity any chelsea-humphries research-as-inquiry cc-nc-sa col-xl-3 p-1">
+        <div class="gallery-item-facets activity any chelsea-humphries research-as-inquiry undergraduate cc-nc-sa col-xl-3 p-1">
           <div class="card thumbnail-card">
             <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj1/full/250,/0/default.jpg" alt="Starting Your Research Worksheet" />
             <div class="card-body">
@@ -319,7 +391,7 @@ This site's collection comprises a set of lessons, each represented by an image 
               <!-- remove default text below or replace with a description from
                 the item record (e.g., This worksheet is used in research consultations and small group teaching sessions. Students are invited to collaborate on the document, and, working with the librarian, fill in the chart to develop search terms and a search string that is then used in Omni for preliminary research.) -->
               <p class="card-text small">
-                This is a Worksheet / Activity for Any created by
+                This is a Activity for Any created by
                 Chelsea Humphries.
               </p>
             </div>
@@ -328,13 +400,98 @@ This site's collection comprises a set of lessons, each represented by an image 
          
         
 
-        <div class="gallery-item-facets presentation any cal-murgu information-has-value cc-nc-sa col-xl-3 p-1">
+        <div class="gallery-item-facets presentation languages evelyn-feldman searching-as-strategic-exploration undergraduate cc-nc-sa col-xl-3 p-1">
           <div class="card thumbnail-card">
-            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj2/full/250,/0/default.jpg" alt="Academic Integrity Tutorial" />
+            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj10/full/250,/0/default.jpg" alt="Library Research for FREN 4P20" />
             <div class="card-body">
-              <a href="/teaching-collection/qatar/obj2.html"><h3 class="card-title">Academic Integrity Tutorial</h3></a>
+              <a href="/teaching-collection/qatar/obj10.html"><h3 class="card-title">Library Research for FREN 4P20</h3></a>
               <!-- remove default text below or replace with a description from
-                the item record (e.g., This module was created in H5P, and it is a remix of a York University module on academic integrity. It includes knowledge checks throughout. ) -->
+                the item record (e.g., ) -->
+              <p class="card-text small">
+                This is a Presentation for Languages created by
+                Evelyn Feldman.
+              </p>
+            </div>
+          </div>
+        </div>
+         
+        
+
+        <div class="gallery-item-facets presentation any colleen-mackinnon research-as-inquiry undergraduate cc-nc-sa col-xl-3 p-1">
+          <div class="card thumbnail-card">
+            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj11/full/250,/0/default.jpg" alt="Online Searching &amp; News Evaluation" />
+            <div class="card-body">
+              <a href="/teaching-collection/qatar/obj11.html"><h3 class="card-title">Online Searching &amp; News Evaluation</h3></a>
+              <!-- remove default text below or replace with a description from
+                the item record (e.g., ) -->
+              <p class="card-text small">
+                This is a Presentation for Any created by
+                Colleen MacKinnon.
+              </p>
+            </div>
+          </div>
+        </div>
+         
+        
+
+        <div class="gallery-item-facets presentation classics evelyn-feldman authority-is-constructed-and-contextual undergraduate cc-nc-sa col-xl-3 p-1">
+          <div class="card thumbnail-card">
+            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj12/full/250,/0/default.jpg" alt="Library Research for Classics" />
+            <div class="card-body">
+              <a href="/teaching-collection/qatar/obj12.html"><h3 class="card-title">Library Research for Classics</h3></a>
+              <!-- remove default text below or replace with a description from
+                the item record (e.g., Asynchronous series of very short videos ) -->
+              <p class="card-text small">
+                This is a Presentation for Classics created by
+                Evelyn Feldman.
+              </p>
+            </div>
+          </div>
+        </div>
+         
+        
+
+        <div class="gallery-item-facets presentation any chelsea-humphries research-as-inquiry undergraduate cc-nc-sa col-xl-3 p-1">
+          <div class="card thumbnail-card">
+            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj13/full/250,/0/default.jpg" alt="SPMA 4P97: Identifying &amp; Evaluating Popular and Scholarly Sources" />
+            <div class="card-body">
+              <a href="/teaching-collection/qatar/obj13.html"><h3 class="card-title">SPMA 4P97: Identifying &amp; Evaluating Popular and Scholarly Sources</h3></a>
+              <!-- remove default text below or replace with a description from
+                the item record (e.g., This H5P presentation module includes:an interactive video introduction to the Sport Management liaison librarian, including linked contact informationthe Hartness Library's YouTube video on identifying popular and scholarly sources, with bookmarks for easy navigationa sorting exercise for students to distinguish popular from scholarly sourcesa video explaining the CRAAP test, with bookmarks for easy navigationfill-in-the-blanks and multiple choice questions applying the CRAAP test to various resources) -->
+              <p class="card-text small">
+                This is a Presentation for Any created by
+                Chelsea Humphries.
+              </p>
+            </div>
+          </div>
+        </div>
+         
+        
+
+        <div class="gallery-item-facets presentation any ian-gordon information-has-value graduate cc-nc-sa col-xl-3 p-1">
+          <div class="card thumbnail-card">
+            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj14/full/250,/0/default.jpg" alt="Graduate Orientation 2021" />
+            <div class="card-body">
+              <a href="/teaching-collection/qatar/obj14.html"><h3 class="card-title">Graduate Orientation 2021</h3></a>
+              <!-- remove default text below or replace with a description from
+                the item record (e.g., ) -->
+              <p class="card-text small">
+                This is a Presentation for Any created by
+                Ian Gordon.
+              </p>
+            </div>
+          </div>
+        </div>
+         
+        
+
+        <div class="gallery-item-facets presentation any cal-murgu authority-is-constructed-and-contextual graduate cc-nc-sa col-xl-3 p-1">
+          <div class="card thumbnail-card">
+            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj15/full/250,/0/default.jpg" alt="Scoping Reviews Review" />
+            <div class="card-body">
+              <a href="/teaching-collection/qatar/obj15.html"><h3 class="card-title">Scoping Reviews Review</h3></a>
+              <!-- remove default text below or replace with a description from
+                the item record (e.g., This two-part presentation was used for Pascal Lupien and his research assistants in the summer of 2021. The first session focused on the specific elements of a scoping review. The second session focused on how to manage references. ) -->
               <p class="card-text small">
                 This is a Presentation for Any created by
                 Cal Murgu.
@@ -345,13 +502,166 @@ This site's collection comprises a set of lessons, each represented by an image 
          
         
 
-        <div class="gallery-item-facets presentation political-science cal-murgu authority-is-constructed-and-contextual cc-nc-sa col-xl-3 p-1">
+        <div class="gallery-item-facets presentation any chelsea-humphries searching-as-strategic-exploration undergraduate cc-nc-sa col-xl-3 p-1">
           <div class="card thumbnail-card">
-            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj3/full/250,/0/default.jpg" alt="Exploring Hansard" />
+            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj16/full/250,/0/default.jpg" alt="HUMA 1P50 Library Presentation" />
             <div class="card-body">
-              <a href="/teaching-collection/qatar/obj3.html"><h3 class="card-title">Exploring Hansard</h3></a>
+              <a href="/teaching-collection/qatar/obj16.html"><h3 class="card-title">HUMA 1P50 Library Presentation</h3></a>
               <!-- remove default text below or replace with a description from
-                the item record (e.g., This video is an introduction to Hansard and Hansard debates. This video complemented an in-person session on the same topic. ) -->
+                the item record (e.g., Resource slide deck with many hyperlinks for students to refer to as they start searching for interdisciplinary/multimedia resources in the humanities) -->
+              <p class="card-text small">
+                This is a Presentation for Any created by
+                Chelsea Humphries.
+              </p>
+            </div>
+          </div>
+        </div>
+         
+        
+
+        <div class="gallery-item-facets presentation business linda-lowry research-as-inquiry undergraduate cc-nc-sa col-xl-3 p-1">
+          <div class="card thumbnail-card">
+            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj17_00/full/250,/0/default.jpg" alt="Sources and strategies for feasibility analysis research" />
+            <div class="card-body">
+              <a href="/teaching-collection/qatar/obj17.html"><h3 class="card-title">Sources and strategies for feasibility analysis research</h3></a>
+              <!-- remove default text below or replace with a description from
+                the item record (e.g., ) -->
+              <p class="card-text small">
+                This is a Presentation for Business created by
+                Linda Lowry.
+              </p>
+            </div>
+          </div>
+        </div>
+         
+        
+
+        <div class="gallery-item-facets presentation business linda-lowry authority-is-constructed-and-contextual undergraduate cc-nc-sa col-xl-3 p-1">
+          <div class="card thumbnail-card">
+            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj18/full/250,/0/default.jpg" alt="MSCM 5P01: Research methodology 1 - Finding secondary data &amp; more!" />
+            <div class="card-body">
+              <a href="/teaching-collection/qatar/obj18.html"><h3 class="card-title">MSCM 5P01: Research methodology 1 - Finding secondary data &amp; more!</h3></a>
+              <!-- remove default text below or replace with a description from
+                the item record (e.g., ) -->
+              <p class="card-text small">
+                This is a Presentation for business created by
+                Linda Lowry.
+              </p>
+            </div>
+          </div>
+        </div>
+         
+        
+
+        <div class="gallery-item-facets presentation any cal-murgu research-as-inquiry undergraduate cc-nc-sa col-xl-3 p-1">
+          <div class="card thumbnail-card">
+            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj19/full/250,/0/default.jpg" alt="Wrangling Grey Literature in an Age of Abundance" />
+            <div class="card-body">
+              <a href="/teaching-collection/qatar/obj19.html"><h3 class="card-title">Wrangling Grey Literature in an Age of Abundance</h3></a>
+              <!-- remove default text below or replace with a description from
+                the item record (e.g., Please see associated activity for more information. ) -->
+              <p class="card-text small">
+                This is a Presentation for Any created by
+                Cal Murgu.
+              </p>
+            </div>
+          </div>
+        </div>
+         
+        
+
+        <div class="gallery-item-facets activity any cal-murgu information-has-value undergraduate cc-nc-sa col-xl-3 p-1">
+          <div class="card thumbnail-card">
+            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj2/full/250,/0/default.jpg" alt="Wrangling Grey Literature Worksheets" />
+            <div class="card-body">
+              <a href="/teaching-collection/qatar/obj2.html"><h3 class="card-title">Wrangling Grey Literature Worksheets</h3></a>
+              <!-- remove default text below or replace with a description from
+                the item record (e.g., Each question in this activity is associated with one of the featured resources in the associated presentation. Students have an opportunity to test out resources, in a structured manner, while the librarian and prof is in the classroom. 20 minutes. ) -->
+              <p class="card-text small">
+                This is a Activity for Any created by
+                Cal Murgu.
+              </p>
+            </div>
+          </div>
+        </div>
+         
+        
+
+        <div class="gallery-item-facets assignment political-science ian-gordon authority-is-constructed-and-contextual graduate cc-nc-sa col-xl-3 p-1">
+          <div class="card thumbnail-card">
+            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj3/full/250,/0/default.jpg" alt="CHEM 2P21 Information Exercise " />
+            <div class="card-body">
+              <a href="/teaching-collection/qatar/obj3.html"><h3 class="card-title">CHEM 2P21 Information Exercise </h3></a>
+              <!-- remove default text below or replace with a description from
+                the item record (e.g., A self-paced learning exercise for a large second year class that involves chemistry students and other STEM students taking this course as a required course for other programs. This exercise ties into CHEM 2P20 which introduces SciFinder and other resources. This tool introduces students to SciFinder structure searching, Reaxys as a new database and Espacenet and the value of patents to scientific inquiry. Exercises include green chemistry, reflecting on the science/medical literature when searching a known antibiotic for further inquiry and comments as part of a weekly lab exercise discussed by the faculty member during lectures and lab assistants for each section as one of the last labs/assignments for this course. 3 short videos using ppt slides created and posted on a libguide for students to watch on YouTube. These are important, one gives an overview of the exercise and commentary, one is for SciFinder show and tell, and a similar one for Reaxys. All watched heavily!) -->
+              <p class="card-text small">
+                This is a Assignment for Political Science created by
+                Ian Gordon.
+              </p>
+            </div>
+          </div>
+        </div>
+         
+        
+
+        <div class="gallery-item-facets other any linda-lowry searching-as-strategic-exploration undergraduate cc-nc-sa col-xl-3 p-1">
+          <div class="card thumbnail-card">
+            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj4/full/250,/0/default.jpg" alt="Business Information Triangle (Image Hotspot)" />
+            <div class="card-body">
+              <a href="/teaching-collection/qatar/obj4.html"><h3 class="card-title">Business Information Triangle (Image Hotspot)</h3></a>
+              <!-- remove default text below or replace with a description from
+                the item record (e.g., The Business Information Triangle is a visual model for understanding the origin and flow of information about companies, industries and markets, and business publications.) -->
+              <p class="card-text small">
+                This is a Other for Any created by
+                Linda Lowry.
+              </p>
+            </div>
+          </div>
+        </div>
+         
+        
+
+        <div class="gallery-item-facets presentation any jennifer-thiessen research-as-inquiry undergraduate cc-nc-sa col-xl-3 p-1">
+          <div class="card thumbnail-card">
+            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj5/full/250,/0/default.jpg" alt="Constructions of Organization Presentation for EDUC5960" />
+            <div class="card-body">
+              <a href="/teaching-collection/qatar/obj5.html"><h3 class="card-title">Constructions of Organization Presentation for EDUC5960</h3></a>
+              <!-- remove default text below or replace with a description from
+                the item record (e.g., ) -->
+              <p class="card-text small">
+                This is a Presentation for Any created by
+                Jennifer Thiessen.
+              </p>
+            </div>
+          </div>
+        </div>
+         
+        
+
+        <div class="gallery-item-facets presentation business cal-murgu authority-is-constructed-and-contextual undergraduate cc-nc-sa col-xl-3 p-1">
+          <div class="card thumbnail-card">
+            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj6/full/250,/0/default.jpg" alt="Academic Integrity Module" />
+            <div class="card-body">
+              <a href="/teaching-collection/qatar/obj6.html"><h3 class="card-title">Academic Integrity Module</h3></a>
+              <!-- remove default text below or replace with a description from
+                the item record (e.g., One part of a four-part Sakai tutorial. This module was created in H5P, and it is a remix of a York University module on academic integrity. It includes knowledge checks throughout. ) -->
+              <p class="card-text small">
+                This is a Presentation for Business created by
+                Cal Murgu.
+              </p>
+            </div>
+          </div>
+        </div>
+         
+        
+
+        <div class="gallery-item-facets presentation political-science cal-murgu research-as-inquiry undergraduate cc-nc-sa col-xl-3 p-1">
+          <div class="card thumbnail-card">
+            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj7/full/250,/0/default.jpg" alt="Exploring Hansard" />
+            <div class="card-body">
+              <a href="/teaching-collection/qatar/obj7.html"><h3 class="card-title">Exploring Hansard</h3></a>
+              <!-- remove default text below or replace with a description from
+                the item record (e.g., For Nicole Goodman's graduate seminar. One of the assignments was directly related to Hansard debates. This video complemented an in-person session on the same topic. ) -->
               <p class="card-text small">
                 This is a Presentation for Political Science created by
                 Cal Murgu.
@@ -362,11 +672,11 @@ This site's collection comprises a set of lessons, each represented by an image 
          
         
 
-        <div class="gallery-item-facets presentation any chelsea-humphries searching-as-strategic-exploration cc-nc-sa col-xl-3 p-1">
+        <div class="gallery-item-facets presentation any chelsea-humphries information-has-value undergraduate cc-nc-sa col-xl-3 p-1">
           <div class="card thumbnail-card">
-            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj4/full/250,/0/default.jpg" alt="Library Research 101" />
+            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj8/full/250,/0/default.jpg" alt="Library Research 101" />
             <div class="card-body">
-              <a href="/teaching-collection/qatar/obj4.html"><h3 class="card-title">Library Research 101</h3></a>
+              <a href="/teaching-collection/qatar/obj8.html"><h3 class="card-title">Library Research 101</h3></a>
               <!-- remove default text below or replace with a description from
                 the item record (e.g., This is a synchronous, online presentation for undergraduate students, introducing them to the basics of library research. It is intended for all disciplines, and benefits from being run by at least two librarians with diverse research experience. Low-stakes participation/interaction is facilitated by Mentimeter.) -->
               <p class="card-text small">
@@ -379,33 +689,16 @@ This site's collection comprises a set of lessons, each represented by an image 
          
         
 
-        <div class="gallery-item-facets presentation any cal-murgu research-as-inquiry cc-nc-sa col-xl-3 p-1">
+        <div class="gallery-item-facets presentation any chelsea-humphries authority-is-constructed-and-contextual graduate cc-nc-sa col-xl-3 p-1">
           <div class="card thumbnail-card">
-            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj5/full/250,/0/default.jpg" alt="Scoping Reviews Review" />
+            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj9_00/full/250,/0/default.jpg" alt="HLSC 2P98 Evaluating Web Content" />
             <div class="card-body">
-              <a href="/teaching-collection/qatar/obj5.html"><h3 class="card-title">Scoping Reviews Review</h3></a>
+              <a href="/teaching-collection/qatar/obj9.html"><h3 class="card-title">HLSC 2P98 Evaluating Web Content</h3></a>
               <!-- remove default text below or replace with a description from
-                the item record (e.g., This two-part presentation was used for Pascal Lupien and his research assistants in the summer of 2021. The first session focused on the specific elements of a scoping review. The second session focused on how to manage references. ) -->
+                the item record (e.g., This video is an asynchronous presentation for a health sciences class learning about media advocacy in public health. It is linked to an assignment that involves evaluating YouTube videos related to the COVID-19 pandemic.) -->
               <p class="card-text small">
                 This is a Presentation for Any created by
-                Cal Murgu.
-              </p>
-            </div>
-          </div>
-        </div>
-         
-        
-
-        <div class="gallery-item-facets presentation business linda-lowry authority-is-constructed-and-contextual cc-nc-sa col-xl-3 p-1">
-          <div class="card thumbnail-card">
-            <img class="d-block card-img-top gallery-thumb w-100 mh-100" src="/teaching-collection/img/derivatives/iiif/images/obj6_00/full/250,/0/default.jpg" alt="Sources and strategies for feasibility analysis research" />
-            <div class="card-body">
-              <a href="/teaching-collection/qatar/obj6.html"><h3 class="card-title">Sources and strategies for feasibility analysis research</h3></a>
-              <!-- remove default text below or replace with a description from
-                the item record (e.g., A required course for the BBA. Feasibility analysis is a common assignment so this presentation addresses the requirement of the assignment.) -->
-              <p class="card-text small">
-                This is a Presentation for Business created by
-                Linda Lowry.
+                Chelsea Humphries.
               </p>
             </div>
           </div>
@@ -419,7 +712,7 @@ This site's collection comprises a set of lessons, each represented by an image 
 <script type="text/javascript">
   $( document ).ready(function() {
 
-          console.log(["object_type","discipline","creator","frame","license"]) // liquid array of one or more fields for facetting
+          console.log(["object_type","discipline","creator","frame","study_status","license"]) // liquid array of one or more fields for facetting
 
           // This JavaScript controls the expanding and contracting facet headers.
           // Additional JS for this page in assets/js/facets.js
@@ -448,7 +741,7 @@ This site's collection comprises a set of lessons, each represented by an image 
 
     <div class="row">
       <div class="col-lg-6">
-        <p>CC-BY-SA-NC 4.0 | Made with ❤ by <a href="https://brocku.ca/library/">Brock Library Teaching and Learning</a></p>
+        <p style="margin-bottom:0!important;">CC-BY-SA-NC 4.0 | Made with ❤ by <a href="https://brocku.ca/library/">Brock Library Teaching and Learning</a></p>
         <img style="width: 50%;" class="hvr-bob" src="/teaching-collection/img/logo.png"></img>
       </div>
       <div class="col-lg-6">      

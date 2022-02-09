@@ -11,8 +11,8 @@
       "@id": "/teaching-collection/img/derivatives/iiif/images/obj5",
       "profile": "http://iiif.io/api/image/2/level0.json"
     },
-    "width": 2230,
-    "height": 1258
+    "width": 1822,
+    "height": 948
   },
   "on": "/teaching-collection/img/derivatives/iiif/canvas/obj5.json",
   "@context": "http://iiif.io/api/presentation/2/context.json"

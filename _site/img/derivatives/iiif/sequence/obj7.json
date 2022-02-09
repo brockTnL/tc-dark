@@ -1,0 +1,35 @@
+{
+  "@id": "/teaching-collection/img/derivatives/iiif/sequence/obj7.json",
+  "@type": "sc:Sequence",
+  "canvases": [
+    {
+      "@type": "sc:Canvas",
+      "@id": "/teaching-collection/img/derivatives/iiif/canvas/obj7.json",
+      "label": "front",
+      "width": 2586,
+      "height": 1412,
+      "thumbnail": "/teaching-collection/img/derivatives/iiif/images/obj7/full/250,/0/default.jpg",
+      "images": [
+        {
+          "@type": "oa:Annotation",
+          "@id": "/teaching-collection/img/derivatives/iiif/annotation/obj7.json",
+          "motivation": "sc:painting",
+          "resource": {
+            "@id": "/teaching-collection/img/derivatives/iiif/images/obj7/full/full/0/default.jpg",
+            "@type": "dcterms:Image",
+            "format": "image/jpeg",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "/teaching-collection/img/derivatives/iiif/images/obj7",
+              "profile": "http://iiif.io/api/image/2/level0.json"
+            },
+            "width": 2586,
+            "height": 1412
+          },
+          "on": "/teaching-collection/img/derivatives/iiif/canvas/obj7.json"
+        }
+      ]
+    }
+  ],
+  "@context": "http://iiif.io/api/presentation/2/context.json"
+}

@@ -5,9 +5,34 @@
   "label": "qatar",
   "manifests": [
     {
+      "@id": "/teaching-collection/img/derivatives/iiif/obj17/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "obj17"
+    },
+    {
+      "@id": "/teaching-collection/img/derivatives/iiif/obj10/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "obj10"
+    },
+    {
       "@id": "/teaching-collection/img/derivatives/iiif/obj5/manifest.json",
       "@type": "sc:Manifest",
       "label": "obj5"
+    },
+    {
+      "@id": "/teaching-collection/img/derivatives/iiif/obj4/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "obj4"
+    },
+    {
+      "@id": "/teaching-collection/img/derivatives/iiif/obj11/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "obj11"
+    },
+    {
+      "@id": "/teaching-collection/img/derivatives/iiif/obj13/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "obj13"
     },
     {
       "@id": "/teaching-collection/img/derivatives/iiif/obj6/manifest.json",
@@ -15,9 +40,19 @@
       "label": "obj6"
     },
     {
-      "@id": "/teaching-collection/img/derivatives/iiif/obj4/manifest.json",
+      "@id": "/teaching-collection/img/derivatives/iiif/obj7/manifest.json",
       "@type": "sc:Manifest",
-      "label": "obj4"
+      "label": "obj7"
+    },
+    {
+      "@id": "/teaching-collection/img/derivatives/iiif/obj12/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "obj12"
+    },
+    {
+      "@id": "/teaching-collection/img/derivatives/iiif/obj16/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "obj16"
     },
     {
       "@id": "/teaching-collection/img/derivatives/iiif/obj3/manifest.json",
@@ -30,9 +65,34 @@
       "label": "obj2"
     },
     {
+      "@id": "/teaching-collection/img/derivatives/iiif/obj15/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "obj15"
+    },
+    {
       "@id": "/teaching-collection/img/derivatives/iiif/obj1/manifest.json",
       "@type": "sc:Manifest",
       "label": "obj1"
+    },
+    {
+      "@id": "/teaching-collection/img/derivatives/iiif/obj14/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "obj14"
+    },
+    {
+      "@id": "/teaching-collection/img/derivatives/iiif/obj19/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "obj19"
+    },
+    {
+      "@id": "/teaching-collection/img/derivatives/iiif/obj18/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "obj18"
+    },
+    {
+      "@id": "/teaching-collection/img/derivatives/iiif/obj8/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "obj8"
     }
   ]
 }
