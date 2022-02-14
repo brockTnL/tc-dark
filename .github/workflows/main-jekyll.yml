@@ -1,0 +1,32 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI Jekyll
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: pandoc/latex
+    steps:
+      - uses: actions/checkout@v2
+      - name: creates _site
+        run:  sh ./build.sh
+      - name: Pushes to another repository
+        id: brockTnL/teaching-collection
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: _site/
+          destination-github-username: 'brockTnL'
+          destination-repository-name: 'teaching-collection'
+          user-email: cmurgu@brocku.ca
+          commit-message: See ORIGIN_COMMIT from $GITHUB_REF
+          target-branch: main
+      - name: Test get variable exported by push-to-another-repository
+        run: echo $DESTINATION_CLONED_DIRECTORY
