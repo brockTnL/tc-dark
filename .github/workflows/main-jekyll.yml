@@ -12,6 +12,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    #This task pushes the build to the Front_End repository
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          external_repository: brockTnL/teaching-collection
+          publish_branch: main
+          publish_dir: ./_site
       - uses: actions/checkout@v2
       - name: Pushes to another repository
         id: push_directory
